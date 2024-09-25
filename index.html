@@ -19,17 +19,19 @@
             text-align: center;
             border: 5px solid #ff4d4d; /* Borde rojo */
             border-radius: 15px;
-            padding: 50px;
+            padding: 30px;
             background-color: #ffcccc; /* Fondo más intenso dentro del contenedor */
             box-shadow: 0 10px 20px rgba(255, 77, 77, 0.5); /* Sombra sutil */
             transition: transform 0.5s ease;
             cursor: pointer;
+            width: 90%;
+            max-width: 500px;
         }
         .container:hover {
             transform: scale(1.05); /* Efecto interactivo al hacer hover */
         }
         .names {
-            font-size: 4rem;
+            font-size: 2.5rem; /* Reducir tamaño en móviles */
             font-weight: bold;
             display: flex;
             justify-content: space-between;
@@ -45,14 +47,14 @@
             transition: color 0.3s ease;
         }
         .message {
-            font-size: 2.5rem;
+            font-size: 1.8rem; /* Ajuste del tamaño en móviles */
             margin-top: 20px;
             color: #cc0066; /* Rosa oscuro para el mensaje principal */
             opacity: 0;
             animation: fadeInMessage 4s ease-in-out forwards;
         }
         .special-message {
-            font-size: 1.7rem;
+            font-size: 1.2rem; /* Reducir tamaño en móviles */
             margin-top: 20px;
             color: #ff4d4d; /* Rojo brillante para el mensaje especial */
             opacity: 0;
@@ -89,6 +91,21 @@
                 opacity: 1;
             }
         }
+        /* Estilos específicos para pantallas pequeñas */
+        @media (max-width: 600px) {
+            .names {
+                font-size: 2rem; /* Tamaño de fuente más pequeño en móviles */
+            }
+            .message {
+                font-size: 1.5rem; /* Tamaño de fuente más pequeño en móviles */
+            }
+            .special-message {
+                font-size: 1rem; /* Tamaño de fuente más pequeño en móviles */
+            }
+            .container {
+                padding: 20px; /* Reducir padding en pantallas pequeñas */
+            }
+        }
     </style>
     <script>
         // Redirige a la página de la línea de tiempo cuando se haga clic en el contenedor
@@ -109,3 +126,4 @@
     </div>
 </body>
 </html>
+
